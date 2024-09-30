@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    /* text-align: center; */
+
+}
+h1 {
+    font-size: 2em;
+}
+
+header {
+    width: 100%;
+    background-color: azure;
+    height: 70px;
+    position: fixed;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+}
+nav {
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+#banner {
+    height: 100vh;
+    background-color: aqua;
+}
+
