@@ -30,13 +30,24 @@ header {
 nav ul li {
     display: inline-block;
     margin-right: 20px;
-    font-weight: bold;
 }
+nav ul li a {
+    font-weight: bold;
+    line-height: 2em;
+    text-decoration: none;
+    color: chocolate;
+
+}
+nav ul li a:hover {
+    color: black;
+}
+
 nav {
-    width: 500px;
-    position: relative;
-    margin: 0 auto;
+    width: 100%;
+    /* position: relative;
+    margin: 0 auto; */
     top:20px;
+    text-align: center;
 }
 
 #banner {
@@ -73,7 +84,8 @@ footer{
 /*header, */
 /*#banner, */
 #about, 
-#projects 
+#projects,
+#contact  
 /*, footer */ 
 {
     padding: 20px;
@@ -82,3 +94,53 @@ footer{
     margin: 0 auto;
 }
 
+
+
+/* Mobile menu */
+#menu{
+    position: absolute;
+    color: blue;
+    cursor: pointer;
+    top: 0px;
+    left: 20px;
+    font-size: 2em;
+}
+#panel{
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    top: 0px;
+    left: -300px;
+    background: #b5b5b5;
+    transition: all 0.5s ease-in;    
+    padding: 20px;
+    z-index: 10;
+}
+#panel.slide-in{
+    transform: translateX(300px);
+}
+
+#menu{
+    display: none;
+}
+#close{
+    width: 30px;
+    position: relative;
+    left: 255px;
+    top: -19px;
+}
+
+#panel nav ul li {
+    display: block;
+    font-weight: bold;
+    /* word-spacing: 20px; */
+}
+@media only screen and (max-width: 600px) {
+    #menu{
+        display: block;
+    }
+    header nav{
+        display: none;
+    }
+
+}
