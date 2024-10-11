@@ -78,6 +78,7 @@ figure {
 
 figure img {
     width: 100%;
+    cursor: pointer;
 }
 
 footer{
