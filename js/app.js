@@ -7,7 +7,7 @@ let projects = [
         ]
     },
     {
-        id: 2, name: 'Project 2', enable: true, description: 'Description 2', images: [
+        id: 2, name: 'Project 2', enable: false, description: 'Description 2', images: [
             { id: 1, src: 'img/project2-1.jpg' },
             { id: 2, src: 'https://placebear.com/600/400' },
         ]
@@ -53,9 +53,10 @@ function openOverlay(project) {
 }
 
 const Project = ({ project }) => {
-    return <div>
+    let show = (project.enable!==false) ? 'block' : 'none';
+
+    return <div style={{display: show}}>
         <h2>{project.name}</h2>
-        {/* <p>{project.enable ? "project active" : "project inactive"}</p> */}
         <p>{project.description}</p>
         <div>
             {project.images.map(image => (
