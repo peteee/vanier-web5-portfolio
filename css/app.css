@@ -1,6 +1,13 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
 
+/* Concept of Color Themes using CSS vars */
+:root {
+    --header-color: azure;
+    --nav-link-color: chocolate;
+    --nav-link-hover: black;
+}
+  
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +34,7 @@ h1 {
 
 header {
     width: 100%;
-    background-color: azure;
+    background-color: var(--header-color);
     height: 50px;
     position: fixed;
     z-index: 1;
@@ -40,11 +47,11 @@ nav ul li a {
     font-weight: bold;
     line-height: 2em;
     text-decoration: none;
-    color: chocolate;
+    color: var(--nav-link-color);
 
 }
 nav ul li a:hover {
-    color: black;
+    color: var(--nav-link-hover);
 }
 
 nav {
